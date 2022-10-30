@@ -44,7 +44,7 @@ def user_input_features():
     return features
 input_df = user_input_features()
 
-heart_dataset = pd.read_csv("C:/Users/Samujjwal/Desktop/Michigan_State_University/CMSE/heart.csv")
+heart_dataset = pd.read_csv("heart.csv")
 
 alt_handle = alt.Chart(heart_dataset).mark_circle(size=60).encode(x='sex', y='age').interactive()
 st.altair_chart(alt_handle)
